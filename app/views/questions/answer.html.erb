@@ -1,0 +1,17 @@
+<% @input = params[:ask] %>
+
+<div class='container' id="container-id">
+    <div class="card">
+        <img src="https://media.giphy.com/media/WpIPS0DWNpMm4kfMVr/giphy.gif" class="card-img-top" alt="stupid gif">
+        <h3 class="card-title mt-3">You ask, I answer!</h3>
+        <p class="card-subtitle mb-2 text-muted">Have a look below to find your stupid answer</p>
+    </div>
+    <ul class="flex-column">
+        <li><strong>DID YOU SAY: </strong><%= "#{@input}???" %></li>
+        <br>
+        <li><strong>Well, here is my holly answer:</strong></li>
+        <li><%= @answer %></li>
+        <br>
+        <li><%= link_to "I dare you to ask me again!!", ask_path, :class => "btn btn-danger" %></li>        
+    </ul>
+</div>
